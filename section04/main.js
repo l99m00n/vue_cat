@@ -1,3 +1,3 @@
-var app = new VTTCue({
+var app = new Vue({
     el: '#app'
 })
