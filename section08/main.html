@@ -15,6 +15,11 @@
         <input type="text" v-bind:value="message.value">
         <!-- データ全体の状態をJSON形式で画面を表示 -->
         <pre>{{ $data }}</pre>
+
+        <!-- countプロパティを表示する -->
+        <p>{{ count }}回クリックされたよ</p>
+        <!-- このボタンをクリックするとincrementメソッドが呼び出される -->
+        <button v-on:click="increment">カウントを増やす</button>
     </div>
     <script
         src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
