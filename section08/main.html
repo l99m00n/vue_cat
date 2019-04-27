@@ -21,8 +21,21 @@
         <!-- このボタンをクリックするとincrementメソッドが呼び出される -->
         <button v-on:click="increment">カウントを増やす</button>
     </div>
+    <div id="css">
+        <!-- class.jsで制御 -->
+        <!-- 複数のプロパティをオブジェクトとして渡すようにするとコードが読みやすくなる -->
+        <p v-bind:class="classObject">Text</p>
+        <p v-bind:style="styleObject">Text</p>
+        <img v-bind="item">
+
+        <svg xmlns="https://www.w3.org/200/svg" version="1.1">
+            <circle cx="100" cy="75" v-bind:r="radius" fill="lightpink"/>
+        </svg>
+        <input type="range" min="0" max="100" v-model="radius">
+    </div>
     <script
         src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
     <script src="main.js"></script>
+    <script src="class.js"></script>
 </body>
 </html>
