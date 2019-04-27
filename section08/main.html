@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="main.css" rel="stylecheet" >
+</head>
+<body>  
+    <div id="app">
+        <p>Hello {{ message.value }}</p>
+        <p>{{ message.value.length }}</p>
+        <p>{{ list[2] }}</p>
+        <!-- プロパティを組み合わせて使用することもできる -->
+        <p>{{ list[num] }}</p>
+        <input type="text" v-bind:value="message.value">
+        <!-- データ全体の状態をJSON形式で画面を表示 -->
+        <pre>{{ $data }}</pre>
+    </div>
+    <script
+        src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
