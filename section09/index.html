@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div v-if="ok">v-if条件による描画</div>
+        <!-- タグを利用した複数要素のグループ化 -->
+        <templete v-if="ok">
+            <header>タイトル</header>
+            <body>コンテンツ</body>
+        </templete>
+        <!-- v-else-ifを用いた複数条件の分岐 -->
+        <div v-if="type === 'A'">
+            type is A
+        </div>
+        <div v-else-if="type === 'B'">
+            type is B
+        </div>
+        <div v-else>
+            条件を満たしていません
+        </div>
+        <div v-show="ok">v-show条件による描画</div>
+    </div>
+    <script
+        src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
