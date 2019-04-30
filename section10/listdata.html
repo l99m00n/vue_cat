@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Vue.js app</title>
-    <link href="main.css" rel="stylesheet">
 </head>
 <body>
     <div id="app">
         <ul>
             <!-- liタグの内側ではitemのプロパティを利用できる -->
-            <li v-for="item in list" v-bind:key="item.id">
+            <li v-for="item in list"
+                v-bind:key="item.id"
+                v-bind:class="{tuyoi: item.hp > 300}">
                 ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
+                <!-- プロパティの値による要素の出し分け -->
+                <span v-if="item.hp > 300">つよい！</span>
             </li>
         </ul>
     </div>
