@@ -25,6 +25,17 @@ new Vue({
         doRemove: function(index) {
             // 受け取ったインデックスの位置から1個要素を削除
             this.list.splice(index, 1)
+        },
+        // もともと持っていなかったプロパティを動的に追加する
+        created: function(item) {
+            this.list.forEach(function(item) {
+            this.$set(item, 'active', false)
+            // item.active = false ではリアクティブにならない
+            }, this)
+        },
+        // 攻撃ボタンをクリックしたときのハンドラ
+        doAttack: function(index) {
+            this.list[index].hp -= 10
         }
     }
 })
