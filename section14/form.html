@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js app</title>
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <textarea v-model="message"></textarea>
+        <pre>{{ message }}</pre>
+        <!-- 単一チェックボックスの値の型はboolean
+        <label>
+            <input type="checkbox" v-model="val">{{ val }}
+        </label>
+        -->
+        <!-- 複数要素のチェックボックスの値の型は配列
+        <label><input type="checkbox" v-model="val" value="A"> A</label>
+        <label><input type="checkbox" v-model="val" value="B"> B</label>
+        <label><input type="checkbox" v-model="val" value="C"> C</label>
+        <p>{{ val }}</p>
+        -->
+        <!-- 複数選択セレクトボックスの値の型は配列
+        <select v-model="val" multiple>
+            <option value="a">A</option>
+            <option value="b">B</option>
+            <option value="c">C</option>
+        </select>
+        <p>{{ val }}</p>
+        -->
+        ファイルタイプはv-modelディレクティブを使えない
+        リアクティブデータと同期するにはchangeイベントをハンドルする必要がある
+        <input type="file" v-on:change="handleChange">
+        <div v-if="preview"><img v-bind:src="preview"></div>
+    </div>
+    <script
+        src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script src="form.js"></script>
+</body>
+</html>
