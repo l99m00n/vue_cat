@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js app</title>
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <!-- 短い式であればインラインメソッドとして記述するのもOK
+        <button v-on:click="count++">クリック</button>
+        <div>{{ count }}</div>
+        v-onディレクティブを使うと入力を確認してからデータに代入ができる
+        <input v-bind:value="message" v-on:input="handleInput">
+        {{ message }}
+        -->
+        <div v-on:click="handler('div1')">
+            div1
+            <!-- .stopでイベントのバブリングを停止 -->
+            <a href="#top" v-on:click.stop="handler('div2')">div2</a>
+        </div>
+    </div>
+    <script
+        src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script src="event.js"></script>
+</body>
+</html>
