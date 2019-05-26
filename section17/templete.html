@@ -7,14 +7,17 @@
 </head>
 <body>
     <div id="app">
-        <input v-model.number="list">
+        <!-- <input v-model.number="list">
         <p>{{ label }}</p>
         <select v-model="current">
             <option v-for="topic in topics" v-bind:value="topic.value">
                 {{ topic.name }}
             </option>
         </select>
-        <div v-for="item in list">{{ item.full_name }}</div>
+        <div v-for="item in list">{{ item.full_name }}</div> -->
+        <!-- section18 -->
+        <p>{{ price | localeNum }}円</p>
+        <p>180 度は {{ 180 | degreeToRadian | round }} ラジアンだよ</p>
     </div>
     <script
         src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
