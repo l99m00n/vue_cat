@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js app</title>
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <input v-model.number="list">
+        <p>{{ label }}</p>
+        <select v-model="current">
+            <option v-for="topic in topics" v-bind:value="topic.value">
+                {{ topic.name }}
+            </option>
+        </select>
+        <div v-for="item in list">{{ item.full_name }}</div>
+    </div>
+    <script
+        src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
