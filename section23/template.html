@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js app</title>
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <!-- valは引数のように自由な値を渡すことができる -->
+        <comp-child val="これはA"></comp-child>
+        <comp-child val="これはB"></comp-child>
+        <!-- データバインディングを使えば親コンポーネントが持っているデータを選択的に子に渡すこともできる -->
+        <comp-child v-bind:val="message" class="item"></comp-child>
+    </div>
+    <script
+        src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
