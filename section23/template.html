@@ -7,11 +7,17 @@
 </head>
 <body>
     <div id="app">
-        <!-- valは引数のように自由な値を渡すことができる -->
+        <!-- valは引数のように自由な値を渡すことができる
         <comp-child val="これはA"></comp-child>
         <comp-child val="これはB"></comp-child>
-        <!-- データバインディングを使えば親コンポーネントが持っているデータを選択的に子に渡すこともできる -->
-        <comp-child v-bind:val="message" class="item"></comp-child>
+        データバインディングを使えば親コンポーネントが持っているデータを選択的に子に渡すこともできる
+        <comp-child v-bind:val="message" class="item"></comp-child> -->
+        <ul>
+            <comp-child v-for="item in list"
+                v-bind:key="item.id"
+                v-bind:name="item.name"
+                v-bind:hp="item.hp"></comp-child>
+        </ul>
     </div>
     <script
         src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
