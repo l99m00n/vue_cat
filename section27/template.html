@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js app</title>
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+    <!-- ボタンで表示内容を出し分けする
+        <button v-on:click="current^=1">toggle</button>
+        <div v-bind:is="component"></div>
+    </div> -->
+    <!-- フォームを切り替える -->
+    <button v-on:click="current='comp-board'">メッセージ一覧</button>
+    <button v-on:click="current='comp-form'">投稿フォーム</button>
+    <keep-alive>
+        <div v-bind:is="current"></div>
+    </keep-alive>
+    <script
+        src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
+    <script
+        type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
